@@ -1,0 +1,1 @@
+module.exports=async(s,t)=>{try{s.success=function(t){s.body={success:!0,data:t}},await t(),200!==s.status&&s.throw(s.status,s.message)}catch(t){console.error(t.message);const e=100,a=t.message;s.status=t.statusCode||500,s.body={success:!1,message:a.length>e?`${a.substring(0,e)}...`:a}}};

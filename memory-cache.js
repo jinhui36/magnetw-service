@@ -1,0 +1,1 @@
+const store=require("memory-cache");function put(e,t){store.put(e,t)}function get(e){return store.get(e)}function deleteValue(e){store.del(e)}function clear(){store.clear()}module.exports={put:put,get:get,delete:deleteValue,clear:clear};
